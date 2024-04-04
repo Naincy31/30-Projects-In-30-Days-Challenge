@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+:root{
+    --font-color: #fff;
+    --container-bg-color: #a64dff;
+    --hover-color: #d9b3ff;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Muli', sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: var(--container-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    min-width: 350px;
+    min-height: 300px;
+}
+
+.container h3{
+    text-align: center;
+    color: var(--font-color);
+    letter-spacing: 0.2px;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    margin: 5px 10px;
+    padding: 0px 20px;
+}
+
+.form-container label{
+    margin-bottom: 20px;
+}
+
+.form-container label > span{
+    display: block;
+    margin-bottom: -10px;
+    color: var(--font-color);
+}
+
+.form-container label > input{
+    width: 100%;
+    padding: 0px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1.5px solid #fff;
+    transition: border-color, padding-top, margin-top 0.3s ease;
+}
+
+.form-container label > input:focus{
+    outline: none;
+    border-color: var(--hover-color);
+    padding-top: 10px;
+    margin-top: 5px;
+}
+
+.form-container button{
+    cursor: pointer;
+    font-family: inherit;
+    padding: 10px 0px;
+    border-radius: 3px;
+    border: none;
+    background-color: var(--hover-color);
+    transition: transform 0.3s ease;
+}
+
+.form-container button:active{
+    transform: scale(0.99);
+}
+
+.container p{
+    margin-left: 10px;
+    padding-left: 20px;
+    color: var(--font-color);
+    margin-bottom: 20px;
+}
+
+.container p > a{
+    text-decoration: none;
+    color: var(--hover-color);
+}
