@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+:root{
+    --container-color: #fff;
+    --btn-color: #a64dff;
+    --bg-color: #d9b3ff;
+    --font-color: grey;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Muli', sans-serif;
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: var(--container-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 100%;
+}
+
+.container h3{
+    margin: 0;
+    opacity: 0.5;
+    letter-spacing: 1.2px;
+}
+
+.container .joke{
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 40px;
+    margin: 50px auto;
+    max-width: 600px;
+}
+
+
+.container .btn{
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: var(--btn-color);
+    border: none;
+    border-radius: 5px;
+    padding: 14px 20px;
+    color: var(--container-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.container .btn:active{
+    transform: scale(0.97);
+}
+
+
