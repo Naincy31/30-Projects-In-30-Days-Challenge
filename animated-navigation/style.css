@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+:root{
+    --nav-bg-color: #00004d;
+    --font-color: #fff;
+    --nav-active-bg-color: #b3b3ff;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+i{
+    color: var(--font-color);
+}
+
+#navbar{
+    background: var(--nav-bg-color);
+    height: 70px;
+}
+
+#navbar .left-nav{
+    float: left;
+    position: relative;
+}
+
+#navbar .right-nav{
+    float: right;
+    padding: 20px;
+}
+
+.nav-content{
+    width: 0;
+    height: 0;
+    overflow-y: auto;
+    transition: width 0.3s;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: 18px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    display: flex;
+    transition: left 0.5s;
+}
+
+.fa-xmark{
+    display: none;
+}
+
+ul{
+    list-style-type: none;
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--font-color);
+    padding: 10px 0;
+}
+
+.left-nav.active{
+    background-color: var(--nav-active-bg-color);
+}
+
+.left-nav.active .nav-content{
+    display: block;
+    width: 150px;
+    height: 100vh;
+}
+
+.left-nav.active li{
+    padding: 20px 0;
+}
+
+.left-nav.active button{
+    position: absolute;
+    left: 100px;
+    top: 20px;
+    transform: rotate(180deg);
+    transition: transform 0.5s;
+}
+
+.left-nav.active .fa-bars{
+    display: none;
+}
+
+.left-nav.active .fa-xmark{
+    display: block;
+}
