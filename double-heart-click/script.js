@@ -1,5 +1,6 @@
 const loveMe = document.querySelector('.loveMe')
 const times = document.getElementById('times')
+const heartIcon = document.querySelector('body i')
 
 let clickTime = 0
 let count = 0
@@ -16,6 +17,8 @@ loveMe.addEventListener('click', (e) => {
         }
     }
 })
+
+heartIcon.addEventListener('click', () => styleHeartIcon())
 
 const createHeart = (e) => {
     const heart = document.createElement('i')
@@ -34,9 +37,23 @@ const createHeart = (e) => {
     console.log(xInside, yInside);
 
     loveMe.appendChild(heart)
+    styleHeartIcon()
+
     times.innerHTML = ++count
 
     setTimeout(() => {
         heart.remove()
     }, 1000)
+}
+
+function styleHeartIcon(){
+    if(heartIcon.classList.contains('fa-solid')){
+        heartIcon.classList.remove('fa-solid')
+        heartIcon.classList.add('fa-regular')
+        heartIcon.style.color = 'black'
+    } else {
+        heartIcon.classList.add('fa-solid')
+        heartIcon.classList.remove('fa-regular')
+        heartIcon.style.color = '#f03514'
+    }
 }
